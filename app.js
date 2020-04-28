@@ -8,7 +8,7 @@ app.get('/', (req, res, next) => {
 });
  
 app.get('/user', (req, res, next) => {
-  res.send('Welcome to user page');
+  res.send('Welcome to user page after nodemon');
 })
 
 
