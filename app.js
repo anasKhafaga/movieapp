@@ -2,6 +2,12 @@ const express = require('express');
 
 const app = express();
 
+// middlewares
+app.use((req, res, next) => {
+  console.log(req.ip);
+  next();
+});
+
 // routes
 app.get('/', (req, res, next) => {
   res.send('Welcome to homepage');
