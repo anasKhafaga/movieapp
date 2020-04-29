@@ -1,7 +1,8 @@
 const { getLogin } = require('./auth/login');
-const { getMovies } = require('./movieC');
+const { getMovies, getOneMovie } = require('./movieC');
 
 module.exports = {
   getLogin,
-  getMovies
+  getMovies,
+  getOneMovie
 }

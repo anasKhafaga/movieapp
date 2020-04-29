@@ -8,3 +8,5 @@
 {"message":"::1 - - [29/Apr/2020:11:56:47 +0000] \"GET /movies/2 HTTP/1.1\" 200 13664 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [29/Apr/2020:11:59:01 +0000] \"GET /movies/anas HTTP/1.1\" 400 11 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [29/Apr/2020:11:59:13 +0000] \"GET /movies/4 HTTP/1.1\" 200 15668 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [29/Apr/2020:13:32:57 +0000] \"GET /movies/2 HTTP/1.1\" 200 13664 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [29/Apr/2020:13:33:21 +0000] \"GET /movie/573a1390f29313caabcd56df HTTP/1.1\" 200 1126 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
