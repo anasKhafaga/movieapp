@@ -5,12 +5,11 @@ const _uri =
 
 const dbCon = (coll, cb) => {
   MongoClient.connect(_uri)
-    .then(async (client) => { 
+    .then(async (client) => {
       const db = client.db('sample_mflix').collection(coll);
       await cb(db);
       client.close();
-    })
-    .catch();
+    });
 };
  
 module.exports = dbCon;

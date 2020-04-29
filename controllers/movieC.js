@@ -11,20 +11,31 @@ const getMovies = (req, res, next) => {
   const moviesToSkip = (pageNum - 1) * 10;
 
   dbCon('movies', async (db) => { 
-    const movies = await db.find({}).skip(moviesToSkip).limit(10).toArray();
-    res.json(movies);
+    try {
+      const movies = await db.find({}).skip(moviesToSkip).limit(10).toArray();
+      res.json(movies);
+    } catch (err) {
+      res.status(500).send('Internal server error');
+    }
   });
 };
 
 
 const getOneMovie = (req, res, next) => { 
+  if (!ObjectId.isValid(req.params.id)) {
+    return res.status(400).send('bad request');
+  };
   const _id = new ObjectId(req.params.id);
   dbCon('movies', async (db) => { 
-    const movie = await db.findOne({ _id });
-    if (!movie) {
-      return res.status(404).send('Not Found');
+    try {
+      const movie = await db.findOne({ _id });
+      if (!movie) {
+        return res.status(404).send('Not Found');
+      }
+      res.json(movie);
+    } catch (err) { 
+      return res.status(500).send('Internal Server Error');
     }
-    res.json(movie);
   });
 };
 
