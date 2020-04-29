@@ -12,10 +12,5 @@ const dbCon = (coll, cb) => {
     })
     .catch();
 };
-
-dbCon('movies', async (db) => {
-  const movie = await db.findOne();
-  console.log(movie);
-})
  
 module.exports = dbCon;

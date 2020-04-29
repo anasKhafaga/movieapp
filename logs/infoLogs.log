@@ -3,3 +3,4 @@
 {"message":"\u001b[0mGET /auth/login \u001b[36m304\u001b[0m 10.640 ms - -\u001b[0m\n","level":"info"}
 {"message":"hello","level":"info"}
 {"message":"::1 - - [29/Apr/2020:01:50:38 +0000] \"GET /auth/login HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36\"\n","level":"info"}
+{"message":"::1 - - [29/Apr/2020:11:46:32 +0000] \"GET /movies/1 HTTP/1.1\" 200 15 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
