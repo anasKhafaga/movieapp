@@ -21,3 +21,7 @@
 {"message":"::1 - - [29/Apr/2020:15:08:03 +0000] \"GET /comments HTTP/1.1\" 404 147 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [29/Apr/2020:15:11:08 +0000] \"GET /comments HTTP/1.1\" 500 1045 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [29/Apr/2020:15:11:22 +0000] \"GET /comments HTTP/1.1\" 404 9 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"Not Found","level":"error"}
+{"message":"::1 - - [29/Apr/2020:15:17:00 +0000] \"GET /comments HTTP/1.1\" 404 23 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"Bad Request","level":"error"}
+{"message":"::1 - - [29/Apr/2020:15:18:16 +0000] \"GET /movies/name HTTP/1.1\" 400 25 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}

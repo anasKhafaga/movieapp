@@ -20,7 +20,16 @@ routes(app);
 
 app.use((req, res, next) => {
   const error = createError(404);
-  res.status(error.statusCode).send(error.message);
- });
+  next(error);
+});
+ 
+app.use((error, req, res, next) => { 
+  logger.error(error.message);
+
+  res.statusCode = error.statusCode;
+  res.json({
+    message: error.message
+  });
+});
 
 module.exports = app;
