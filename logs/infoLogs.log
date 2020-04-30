@@ -59,3 +59,4 @@
 {"message":"::1 - - [30/Apr/2020:12:13:49 +0000] \"POST /auth/login HTTP/1.1\" 200 216 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [30/Apr/2020:12:14:06 +0000] \"GET /movies/4 HTTP/1.1\" 200 15668 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [30/Apr/2020:12:14:37 +0000] \"GET /movies/4 HTTP/1.1\" 200 15668 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [30/Apr/2020:14:27:34 +0000] \"GET /movies/4 HTTP/1.1\" 200 15668 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}

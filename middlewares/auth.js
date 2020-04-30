@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const { readFileSync } = require('fs');
 
 module.exports = (req, res, next) => { 
-  console.log(req.get('Authorization'));
   if (!req.get('Authorization')) {
     return next(createError(401));
   }
