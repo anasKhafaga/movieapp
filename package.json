@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
+    "@sendgrid/mail": "^7.1.0",
     "bcryptjs": "^2.4.3",
     "bson": "^4.0.4",
     "dotenv": "^8.2.0",
