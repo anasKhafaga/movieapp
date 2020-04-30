@@ -6,7 +6,7 @@ module.exports = (email, username, token) => {
 
   const msg = {
     from: process.env.FROM,
-    to: process.env.TO,
+    to: email,
     subject: 'Welcome to our movie app community',
     html: `
       <p>Hello ${username}!</p>
@@ -15,7 +15,7 @@ module.exports = (email, username, token) => {
 
       <p>Verify you account</p>
 
-      <button><a href='http://localhost:${process.env.PORT}/verify?token=${token}'>Click here</button>
+      <button><a href='http://localhost:${process.env.PORT}/verify?token=${token}'>Click here</a></button>
     `
   }
   

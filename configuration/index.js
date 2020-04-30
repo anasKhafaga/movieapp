@@ -1,4 +1,5 @@
 module.exports = {
   logger: require('./logger'),
-  dbCon: require('./db')
+  dbCon: require('./db'),
+  email: require('./email')
 }
