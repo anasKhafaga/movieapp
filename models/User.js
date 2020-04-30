@@ -1,5 +1,5 @@
 const { dbCon } = require('../configuration');
-const { userValidator } = require('../validator');
+const { userValidator, logSchema } = require('../validator');
 const { hashSync } = require('bcryptjs');
 
 class User {
@@ -56,6 +56,31 @@ class User {
   static validate(userData) {
     return userValidator.validate(userData);
   }
+
+  static login(userData) {
+    return new Promise((resolve, reject) => { 
+
+      // validation
+      const validation = logSchema.validate(userData);
+      if (validation.error) {
+        const error = new Error(validation.error.message);
+        error.statusCode = 400;
+        return resolve(error);
+      }
+      
+      dbCon('users', async (db) => { 
+        try {
+          
+          // find user
+          const user = await db.findOne({ '$or': [{ username: userData['username'] }, { email: userData['username'] }] });
+          
+        } catch (err) {
+          reject(err);
+        }
+      });
+      
+    });
+  };
 }
 
 module.exports = User;
