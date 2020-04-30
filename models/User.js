@@ -72,7 +72,7 @@ class User {
         try {
           
           // find user
-          const user = await db.findOne({ '$or': [{ username: userData['username'] }, { email: userData['username'] }] });
+          const user = await db.findOne({ '$or': [{ username: userData['username'] }, { email: userData['username'] }] }, {projection: {username: 1, password: 1}});
 
           if (!user || !compareSync(userData['password'], user.password)) {
             const error = new Error('Please enter valid username and password.');
