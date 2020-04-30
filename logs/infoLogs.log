@@ -46,3 +46,4 @@
 {"message":"::1 - - [30/Apr/2020:11:17:53 +0000] \"POST /auth/login HTTP/1.1\" 200 200 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [30/Apr/2020:11:21:04 +0000] \"POST /auth/login HTTP/1.1\" 200 132 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [30/Apr/2020:11:27:04 +0000] \"POST /auth/login HTTP/1.1\" 200 183 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [30/Apr/2020:11:55:41 +0000] \"POST /auth/login HTTP/1.1\" 200 193 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
