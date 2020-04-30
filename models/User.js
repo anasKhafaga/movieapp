@@ -48,16 +48,5 @@ class User {
   
 };
 
-const user =new User({
-  username: 'anas',
-  email: 'anassaber@example.com',
-  password: 'anas-1234',
-  first_name: 'Anas',
-  last_name: 'Saber'
-});
 
-user.checkExistence()
-  .then(check => {
-    console.log(check);
-  })
-  .catch(err => console.log(err));
+module.exports = User;
