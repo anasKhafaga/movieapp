@@ -1,6 +1,6 @@
 const { dbCon } = require('../configuration');
 const { userValidator, logSchema } = require('../validator');
-const { hashSync } = require('bcryptjs');
+const { hashSync, compareSync } = require('bcryptjs');
 
 class User {
   constructor(userData) {
@@ -73,6 +73,15 @@ class User {
           
           // find user
           const user = await db.findOne({ '$or': [{ username: userData['username'] }, { email: userData['username'] }] });
+
+          if (!user || !compareSync(userData['password'], user.password)) {
+            const error = new Error('Please enter valid username and password.');
+            error.statusCode = 404;
+            return resolve(error);
+          }
+
+          resolve(user);
+
           
         } catch (err) {
           reject(err);
@@ -82,5 +91,13 @@ class User {
     });
   };
 }
+
+User.login({
+  username: 'anasSaber3',
+  password: 'Anas4545'
+})
+  .then(res => {
+    console.log(res);
+})
 
 module.exports = User;
