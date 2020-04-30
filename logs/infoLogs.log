@@ -36,3 +36,4 @@
 {"message":"Internal Server Error","level":"error"}
 {"message":"::1 - - [30/Apr/2020:06:25:20 +0000] \"POST /auth/signup HTTP/1.1\" 500 35 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [30/Apr/2020:06:25:47 +0000] \"POST /auth/signup HTTP/1.1\" 201 48 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [30/Apr/2020:07:05:22 +0000] \"POST /auth/signup HTTP/1.1\" 201 48 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
