@@ -12,18 +12,52 @@ class User {
     });
   }
 
+  checkExistence() { 
+    return new Promise((resolve, reject) => { 
+
+      dbCon('users', async (db) => {
+        try {
+          const user = await db.findOne({ '$or': [{ username: this.userData['username'] }, { email: this.userData['email'] }] });
+
+          if (!user) {
+            resolve({
+              check: false
+            })
+          } else if (this.userData['username'] === user.username) {
+            resolve({
+              check: true,
+              message: 'this username is already in use'
+            })
+          } else if (this.userData['email'] === user.email) {
+            resolve({
+              check: true,
+              message: 'this eamil is already in use'
+            })
+          }
+        } catch (err) {
+          reject(err);
+        }
+      });
+
+    });
+  };
+
   static validate(userData) {
     return userValidator.validate(userData);
   };
   
 };
 
-const userData ={
-  username: 'anasSaber',
-  email: 'anas@example.com',
+const user =new User({
+  username: 'anas',
+  email: 'anassaber@example.com',
   password: 'anas-1234',
   first_name: 'Anas',
   last_name: 'Saber'
-};
+});
 
-const validation = User.validate(userData);
+user.checkExistence()
+  .then(check => {
+    console.log(check);
+  })
+  .catch(err => console.log(err));
