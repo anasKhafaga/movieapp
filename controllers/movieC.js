@@ -2,7 +2,7 @@ const { dbCon } = require('../configuration')
 const { ObjectId } = require('bson');
 const createError = require('http-errors');
 
-const getMovies = (req, res, next) => { 
+const getMovies = (req, res, next) => {
   const pageNum = parseInt(req.params.page);
 
   if (isNaN(pageNum)) {

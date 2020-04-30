@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const { readFileSync } = require('fs');
 
 module.exports = (req, res, next) => { 
+  console.log(req.get('Authorization'));
   if (!req.get('Authorization')) {
     return next(createError(401));
   }
@@ -11,6 +12,7 @@ module.exports = (req, res, next) => {
   const secret = readFileSync('./private.key');
   try {
     const decode = jwt.verify(token, secret);
+    req.user = { _id: decode._id, username: decode.username };
     next();
   } catch (err) {
     next(createError(401));
