@@ -9,7 +9,7 @@ class User {
   save(cb) { 
     dbCon('users', async (db) => { 
       try {
-        db.insertOne(this.userData);
+        await db.insertOne(this.userData);
         cb();
       } catch (err) {
         cb(err);
