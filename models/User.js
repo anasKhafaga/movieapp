@@ -13,8 +13,7 @@ class User {
   }
 
   static validate(userData) {
-    const result = userValidator.validate(userData);
-    console.log(result);
+    return userValidator.validate(userData);
   };
   
 };
@@ -22,9 +21,9 @@ class User {
 const userData ={
   username: 'anasSaber',
   email: 'anas@example.com',
-  password: 'anas1234',
+  password: 'anas-1234',
   first_name: 'Anas',
   last_name: 'Saber'
 };
 
-User.validate(userData);
+const validation = User.validate(userData);
