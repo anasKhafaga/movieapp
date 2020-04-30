@@ -1,9 +1,9 @@
-const { getLogin } = require('./auth/login');
+const { postLogin } = require('./auth/login');
 const { postSignup } = require('./auth/signup');
 const { getMovies, getOneMovie } = require('./movieC');
 
 module.exports = {
-  getLogin,
+  postLogin,
   getMovies,
   getOneMovie,
   postSignup
