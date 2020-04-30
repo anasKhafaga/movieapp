@@ -6,9 +6,14 @@ class User {
     this.userData = { ...userData };
   };
 
-  save() { 
-    dbCon('users', (db) => { 
-      db.insertOne(this.userData);
+  save(cb) { 
+    dbCon('users', async (db) => { 
+      try {
+        db.insertOne(this.userData);
+        cb();
+      } catch (err) {
+        cb(err);
+      }
     });
   }
 
