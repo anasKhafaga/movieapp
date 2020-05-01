@@ -102,3 +102,4 @@
 {"message":"::1 - - [01/May/2020:09:18:33 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [01/May/2020:09:19:18 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [01/May/2020:09:19:56 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:32:03 +0000] \"GET /movies/4 HTTP/1.1\" 200 16383 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
