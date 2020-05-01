@@ -72,3 +72,12 @@
 {"message":"::1 - - [30/Apr/2020:16:27:17 +0000] \"POST /auth/signup HTTP/1.1\" 201 48 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [01/May/2020:03:52:41 +0000] \"POST /auth/signup HTTP/1.1\" 201 48 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [01/May/2020:03:53:59 +0000] \"GET /auth/verify?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFuYXNTYWJlcjciLCJpYXQiOjE1ODgzMDUxNjEsImV4cCI6MTU4ODM5MTU2MX0.zmRsQvbpow6s3xQtDcCukJH72wIimowwfXbnrmbrBSM HTTP/1.1\" 200 45 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36\"\n","level":"info"}
+{"message":"::ffff:127.0.0.1 - - [01/May/2020:07:04:27 +0000] \"POST /auth/login HTTP/1.1\" 200 216 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:07:04:46 +0000] \"GET /movies/4 HTTP/1.1\" 200 15668 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:07:06:14 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"Unauthorized","level":"error"}
+{"message":"::1 - - [01/May/2020:07:07:14 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 401 26 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"\"value\" must be a string","level":"error"}
+{"message":"::1 - - [01/May/2020:07:07:25 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 400 40 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"Bad Request","level":"error"}
+{"message":"::1 - - [01/May/2020:07:07:45 +0000] \"POST /createComment/125 HTTP/1.1\" 400 25 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}

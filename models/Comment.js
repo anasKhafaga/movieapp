@@ -8,8 +8,8 @@ class Comment {
     this.data.modifiedAt = new Date();
   }
 
-  static validate(commentData) {
-    const validation = Joi.string().max(300).validate(commentData['text']);
+  static validate(commentText) {
+    const validation = Joi.string().max(300).validate(commentText);
 
     if (validation.error) {
       const error = new Error(validation.error.message);
