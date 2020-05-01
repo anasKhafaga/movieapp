@@ -6,13 +6,12 @@
 const sgMail = require('@sendgrid/mail');
 
 /**
- * @function
+ * @function sendingEmails
  * @param {string} email - user email
  * @param {string} username - user username
  * @param {string} token - verification token
  */
-module.exports = (email, username, token) => { 
-
+module.exports = (email, username, token) => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const msg = {
@@ -27,9 +26,8 @@ module.exports = (email, username, token) => {
       <p>Verify you account</p>
 
       <button><a href='http://localhost:${process.env.PORT}/auth/verify?token=${token}'>Click here</a></button>
-    `
-  }
-  
+    `,
+  };
+
   sgMail.send(msg);
-  
 };
