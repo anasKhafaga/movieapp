@@ -12,6 +12,8 @@ class User {
       try {
         const hashedPass = hashSync(this.userData['password'], 12);
         this.userData['password'] = hashedPass;
+        this.userData['verified'] = false;
+        
         await db.insertOne(this.userData);
         cb();
       } catch (err) {

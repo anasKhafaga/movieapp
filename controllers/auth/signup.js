@@ -4,6 +4,8 @@ const { email } = require('../../configuration');
 const jwt = require('jsonwebtoken');
 const { readFileSync } = require('fs');
 
+const secret = readFileSync('./private.key');
+
 const postSignup = (req, res, next) => { 
   // validation
   const validation = User.validate(req.body);
@@ -29,7 +31,6 @@ const postSignup = (req, res, next) => {
           return next(createError(500));
         }
 
-        const secret = readFileSync('./private.key');
         const token = jwt.sign({ username: user.userData['username'] }, secret, {
           expiresIn: '24h'
         });

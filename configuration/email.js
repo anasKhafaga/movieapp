@@ -15,7 +15,7 @@ module.exports = (email, username, token) => {
 
       <p>Verify you account</p>
 
-      <button><a href='http://localhost:${process.env.PORT}/verify?token=${token}'>Click here</a></button>
+      <button><a href='http://localhost:${process.env.PORT}/auth/verify?token=${token}'>Click here</a></button>
     `
   }
   
