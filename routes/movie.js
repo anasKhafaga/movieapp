@@ -5,7 +5,7 @@ const { auth } = require('../middlewares');
 const router = Router();
 
 router
-  .get('/movies/:page', auth, getMovies)
-  .get('/movie/:id', getOneMovie)
+  .get('/movies/:page', getMovies)
+  .get('/movie/:id', auth, getOneMovie)
 
 module.exports = router;
