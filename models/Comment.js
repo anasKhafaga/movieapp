@@ -39,7 +39,7 @@ class Comment {
       dbCon('comments', async(db) => { 
         try {
 
-          await db.updateOne({ _id: commentId }, { '$set': { text } });
+          await db.updateOne({ _id: commentId }, { '$set': { text }, '$currentDate': {modifiedAt: true} });
           res();
           
         } catch (err) {

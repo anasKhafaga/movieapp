@@ -36,12 +36,14 @@ const putComment = (req, res, next)=>{
     return next(createError(400));
   }
 
+  const commentId = new ObjectId(req.params.commentId);
+  
   const error = Comment.validate(req.body['text']);
   if (error) { 
     return next(error);
   };
 
-  Comment.edit(req.params.commentId, req.body['text'])
+  Comment.edit(commentId, req.body['text'])
     .then(() => {
       res.json({
       message: 'done'
@@ -55,7 +57,9 @@ const deleteComment = (req, res, next)=>{
     return next(createError(400));
   }
 
-  Comment.delete(req.params.commentId)
+  const commentId = new ObjectId(req.params.commentId);
+  
+  Comment.delete(commentId)
     .then(() => {
       res.json({
         message: 'done',
