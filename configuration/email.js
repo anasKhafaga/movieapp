@@ -1,5 +1,16 @@
+/**
+ * Sending emails
+ * @module configuration/email
+ */
+
 const sgMail = require('@sendgrid/mail');
 
+/**
+ * @function
+ * @param {string} email - user email
+ * @param {string} username - user username
+ * @param {string} token - verification token
+ */
 module.exports = (email, username, token) => { 
 
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
