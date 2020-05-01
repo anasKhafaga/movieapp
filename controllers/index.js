@@ -1,3 +1,13 @@
+/**
+ * route handlers
+ * @module controllers
+ * @requires controllers/movie
+ * @requires controllers/comment
+ * @requires controllers/auth/login
+ * @requires controllers/auth/signup
+ * @requires controllers/auth/verification
+ */
+
 const { postLogin } = require('./auth/login');
 const { postSignup } = require('./auth/signup');
 const { getVerify } = require('./auth/verification');
