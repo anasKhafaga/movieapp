@@ -9,7 +9,7 @@ class Comment {
   }
 
   static validate(commentData) {
-    const validation = Joi.string().max(300).validate(commentData['body']);
+    const validation = Joi.string().max(300).validate(commentData['text']);
 
     if (validation.error) {
       const error = new Error(validation.error.message);
