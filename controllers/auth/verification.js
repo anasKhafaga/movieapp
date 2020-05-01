@@ -11,7 +11,19 @@ const getVerify = (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, secret);
-    
+        
+    dbCon('users', async (db) => { 
+      const modifiedDoc = await db.updateOne({ username: decoded['username'] }, { '$set': { verified: true } });
+
+      if (modifiedDoc.modifiedCount === 0) {
+        return next(createError(404));
+      }
+
+      res.json({
+        message: 'Your account has been verified!'
+      })
+      
+    });
     
   } catch (err) {
     next(createError(400))

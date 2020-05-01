@@ -34,7 +34,7 @@ const postSignup = (req, res, next) => {
         const token = jwt.sign({ username: user.userData['username'] }, secret, {
           expiresIn: '24h'
         });
-        email(process.env.TO, user.userData['username'], token);
+        email(user.userData['email'], user.userData['username'], token);
         
         res.status(201).json({
           message: 'User has been successfully created'
