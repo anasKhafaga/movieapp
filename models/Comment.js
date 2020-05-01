@@ -32,6 +32,34 @@ class Comment {
       });
     });
   }
+
+  static edit(commentId, text) { 
+
+    return new Promise((res, rej) => { 
+      dbCon('comments', async(db) => { 
+        try {
+
+          await db.updateOne({ _id: commentId }, { '$set': { text } });
+          res();
+          
+        } catch (err) {
+          rej(err);
+        }
+      });
+    });
+    
+  };
+
+  static delete(commentId) {
+    return new Promise((res, rej) => { 
+      dbCon('comments', async(db) => {
+        try { 
+          await db.deleteOne({ _id: commentId });
+          res();
+        } catch (err) { }
+      });
+    });
+  }
 }
 
 module.exports = Comment;

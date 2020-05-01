@@ -30,6 +30,42 @@ const postComment = (req, res, next) => {
   
 };
 
+const putComment = (req, res, next)=>{ 
+
+  if (!ObjectId.isValid(req.params.commentId)) {
+    return next(createError(400));
+  }
+
+  const error = Comment.validate(req.body['text']);
+  if (error) { 
+    return next(error);
+  };
+
+  Comment.edit(req.params.commentId, req.body['text'])
+    .then(() => {
+      res.json({
+      message: 'done'
+      })
+  }).catch(err => next(createError(500)))
+  
+};
+
+const deleteComment = (req, res, next)=>{ 
+  if (!ObjectId.isValid(req.params.commentId)) {
+    return next(createError(400));
+  }
+
+  Comment.delete(req.params.commentId)
+    .then(() => {
+      res.json({
+        message: 'done',
+      });
+    })
+    .catch((err) => next(createError(500)));
+};
+
 module.exports = {
-  postComment
+  postComment,
+  putComment,
+  deleteComment
 }
