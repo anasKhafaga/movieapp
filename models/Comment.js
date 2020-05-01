@@ -22,14 +22,23 @@ class Comment {
 
   save() {
     return new Promise((res, rej) => {
-      dbCon('comments', async (db) => {
+      dbCon('comments', async (db, db2) => {
         try {
-          await db.insertOne(this.data);
+          const comment = await db.insertOne(this.data);
+          this.data['id'] = comment.insertedId;
+          await db2.updateOne({ _id: this.data['movieId'] }, {
+            '$push': {
+              comments: {
+                '$each': [{_id: this.data['id'], username: this.data['username'], text: this.data['text']}],
+                '$slice': -10
+              }
+            }
+          })
           res();
         } catch (err) {
           rej(err);
         }
-      });
+      }, 'movies');
     });
   }
 

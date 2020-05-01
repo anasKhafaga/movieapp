@@ -90,3 +90,15 @@
 {"message":"::1 - - [01/May/2020:07:48:02 +0000] \"PUT /editComment/5eabca66a82b111d345f3a90 HTTP/1.1\" 200 18 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [01/May/2020:07:51:00 +0000] \"PUT /editComment/5eabca66a82b111d345f3a90 HTTP/1.1\" 200 18 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [01/May/2020:07:51:33 +0000] \"DELETE /deleteComment/5eabca66a82b111d345f3a90 HTTP/1.1\" 200 18 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:15:46 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:17:22 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:17:46 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:17:52 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:17:56 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:18:02 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:18:07 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:18:13 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:18:19 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:18:33 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:19:18 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"::1 - - [01/May/2020:09:19:56 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
