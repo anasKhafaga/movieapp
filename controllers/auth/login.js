@@ -1,8 +1,20 @@
+/**
+ * login routes handlers
+ * @module controllers/auth/login
+ */
+
 const { User } = require('../../models');
 const createError = require('http-errors');
 const jwt = require('jsonwebtoken');
 const { readFileSync } = require('fs');
 
+/**
+ * post login
+ * @function postLogin
+ * @param {Object} req - request object
+ * @param {Object} res - response object
+ * @param {Callback} next - callback
+ */
 const postLogin = (req, res, next) => { 
 
   User.login(req.body)

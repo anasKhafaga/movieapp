@@ -1,3 +1,8 @@
+/**
+ * signup routes handlers
+ * @module controllers/auth/signup
+ */
+
 const { User } = require('../../models')
 const createError = require('http-errors');
 const { email } = require('../../configuration');
@@ -6,6 +11,13 @@ const { readFileSync } = require('fs');
 
 const secret = readFileSync('./private.key');
 
+/**
+ * post signup
+ * @function postSignup
+ * @param {Object} req - request object
+ * @param {Object} res - response object
+ * @param {Callback} next - callback
+ */
 const postSignup = (req, res, next) => { 
   // validation
   const validation = User.validate(req.body);

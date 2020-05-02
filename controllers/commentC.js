@@ -1,8 +1,20 @@
+/**
+ * comment routes handlers
+ * @module controllers/comment
+ */
+
 const { ObjectId } = require('bson');
 const createError = require('http-errors');
 const { Comment } = require('../models');
 const { dbCon } = require('../configuration');
 
+/**
+ * post comment
+ * @function postComment
+ * @param {Object} req - request object
+ * @param {Object} res - response object
+ * @param {Callback} next - callback
+ */
 const postComment = (req, res, next) => {
   if (!ObjectId.isValid(req.params.movieId)) {
     return next(createError(400));
@@ -30,6 +42,13 @@ const postComment = (req, res, next) => {
     .catch((err) => next(createError(500)));
 };
 
+/**
+ * put comment
+ * @function putComment
+ * @param {Object} req - request object
+ * @param {Object} res - response object
+ * @param {Callback} next - callback
+ */
 const putComment = (req, res, next) => {
   if (!ObjectId.isValid(req.params.commentId)) {
     return next(createError(400));
@@ -51,6 +70,13 @@ const putComment = (req, res, next) => {
     .catch((err) => next(createError(500)));
 };
 
+/**
+ * delete comment
+ * @function deleteComment
+ * @param {Object} req - request object
+ * @param {Object} res - response object
+ * @param {Callback} next - callback
+ */
 const deleteComment = (req, res, next) => {
   if (!ObjectId.isValid(req.params.commentId)) {
     return next(createError(400));
@@ -67,6 +93,13 @@ const deleteComment = (req, res, next) => {
     .catch((err) => next(createError(500)));
 };
 
+/**
+ * get comment
+ * @function getComment
+ * @param {Object} req - request object
+ * @param {Object} res - response object
+ * @param {Callback} next - callback
+ */
 const getComments = (req, res, next) => {
   if (!ObjectId.isValid(req.params.movieId)) {
     return next(createError(400));
@@ -80,19 +113,18 @@ const getComments = (req, res, next) => {
   const commentsToSkip = pageNum * 10;
 
   dbCon('comments', async (db) => {
-
-    try { 
+    try {
       const comments = await db
         .find({ movieId })
         .sort({ createdAt: -1 })
         .skip(commentsToSkip)
         .limit(10)
         .toArray();
-      
+
       res.json(comments);
     } catch (err) {
       next(createError(500));
-     };
+    }
   });
 };
 

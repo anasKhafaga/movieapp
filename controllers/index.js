@@ -1,11 +1,11 @@
 /**
  * route handlers
  * @module controllers
- * @requires controllers/movie
- * @requires controllers/comment
- * @requires controllers/auth/login
- * @requires controllers/auth/signup
- * @requires controllers/auth/verification
+ * @requires module:controllers/movie
+ * @requires module:controllers/comment
+ * @requires module:controllers/auth/login
+ * @requires module:controllers/auth/signup
+ * @requires module:controllers/auth/verification
  */
 
 const { postLogin } = require('./auth/login');
