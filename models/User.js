@@ -1,5 +1,6 @@
 /**
  * User model
+ * @module models/User
  * @requires module:configuration
  * @requires module:validator
  */

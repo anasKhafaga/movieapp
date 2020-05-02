@@ -1,6 +1,8 @@
 /**
  * models
  * @module models
+ * @requires module:models/User
+ * @requires module:models/Comment
  */
 
 module.exports = {

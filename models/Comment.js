@@ -1,5 +1,6 @@
 /**
  * Comment model
+ * @module models/Comment
  * @requires module:configuration
  */
 
