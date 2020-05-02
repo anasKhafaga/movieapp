@@ -1,12 +1,26 @@
+/**
+ * User model
+ * @requires module:configuration
+ * @requires module:validator
+ */
+
 const { dbCon } = require('../configuration');
 const { userValidator, logSchema } = require('../validator');
 const { hashSync, compareSync } = require('bcryptjs');
 
 class User {
+  /**
+   * returns a user instance
+   * @param {Object} userData - user input
+   */
   constructor(userData) {
     this.userData = { ...userData };
   }
 
+  /**
+   * saves a user into the db
+   * @param {Callback} cb - callback after user saving correctly 
+   */
   save(cb) {
     dbCon('users', async (db) => {
       try {
@@ -22,6 +36,10 @@ class User {
     });
   }
 
+  /**
+   * checks if username or email already exists
+   * @returns {Promise} resolves with object contains check field that is a boolean
+   */
   checkExistence() {
     return new Promise((resolve, reject) => {
       dbCon('users', async (db) => {
@@ -55,10 +73,21 @@ class User {
     });
   }
 
+  /**
+   * validate user input
+   * @param {Object} userData - user input
+   * @static
+   */
   static validate(userData) {
     return userValidator.validate(userData);
   }
 
+  /**
+   * login a user
+   * @param {Object} userData - user input
+   * @returns {Promise} resolves with an error or user data
+   * @static
+   */
   static login(userData) {
     return new Promise((resolve, reject) => { 
 
