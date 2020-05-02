@@ -1,13 +1,28 @@
+/**
+ * Comment model
+ * @requires module:configuration
+ */
+
 const Joi = require('@hapi/joi');
 const { dbCon } = require('../configuration');
 
 class Comment {
+  /**
+   * create a comment instance
+   * @param {Object} commentData - user input with some details about comment and add createdAt / modifiedAt
+   */
   constructor(commentData) {
     this.data = commentData;
     this.data.createdAt = new Date();
     this.data.modifiedAt = new Date();
   }
 
+  /**
+   * validate a comment
+   * @param {string} commentText - user input
+   * @static
+   * @returns {?Object}
+   */
   static validate(commentText) {
     const validation = Joi.string().max(300).validate(commentText);
 
@@ -20,6 +35,10 @@ class Comment {
     return null;
   }
 
+  /**
+   * save a comment to movies coll and comments coll
+   * @returns {Promise}
+   */
   save() {
     return new Promise((res, rej) => {
       dbCon('comments', async (db, db2) => {
@@ -42,6 +61,13 @@ class Comment {
     });
   }
 
+  /**
+   * 
+   * @param {ObjectId} commentId 
+   * @param {string} text - text to be added
+   * @static
+   * @returns {Promise}
+   */
   static edit(commentId, text) { 
 
     return new Promise((res, rej) => { 
@@ -59,6 +85,12 @@ class Comment {
     
   };
 
+  /**
+   * delete a comment from db
+   * @param {ObjectId} commentId 
+   * @static
+   * @returns {Promise}
+   */
   static delete(commentId) {
     return new Promise((res, rej) => { 
       dbCon('comments', async(db) => {
