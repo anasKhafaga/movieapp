@@ -9,6 +9,10 @@ const authRouter = require('./auth');
 const movieRouter = require('./movie');
 const commentRouter = require('./comment');
 
+/**
+ * @function routes
+ * @param {Object} app - Express app
+ */
 module.exports = (app) => { 
   /**
    * @function use
