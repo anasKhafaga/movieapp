@@ -28,7 +28,7 @@ router
   /**
    * @function get
    * @param {string} /verify
-   * @param {Callback} getVerify {@link module:controllers/auth/verifictation~getVerify}
+   * @param {Callback} getVerify {@link module:controllers/auth/verification~getVerify}
    */
   .get('/verify', getVerify);
 

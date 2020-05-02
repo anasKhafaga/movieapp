@@ -95,7 +95,7 @@ const deleteComment = (req, res, next) => {
 
 /**
  * get comment
- * @function getComment
+ * @function getComments
  * @param {Object} req - request object
  * @param {Object} res - response object
  * @param {Callback} next - callback

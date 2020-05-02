@@ -3,3 +3,4 @@ logs/
 .env
 private.key
 out/
+jsdoc.json
