@@ -104,3 +104,7 @@
 {"message":"::1 - - [01/May/2020:09:19:56 +0000] \"POST /createComment/573a1391f29313caabcd70b4 HTTP/1.1\" 201 55 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [01/May/2020:09:32:03 +0000] \"GET /movies/4 HTTP/1.1\" 200 16383 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
 {"message":"::1 - - [01/May/2020:10:11:24 +0000] \"GET /getComments/573a1391f29313caabcd70b4/2 HTTP/1.1\" 200 2301 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"\"extraOne\" is not allowed","level":"error"}
+{"message":"::1 - - [05/May/2020:13:05:19 +0000] \"POST /auth/signup HTTP/1.1\" 400 41 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
+{"message":"\"filed\" is not allowed","level":"error"}
+{"message":"::1 - - [05/May/2020:13:05:54 +0000] \"POST /auth/signup HTTP/1.1\" 400 38 \"-\" \"PostmanRuntime/7.24.1\"\n","level":"info"}
